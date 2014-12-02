@@ -1,10 +1,34 @@
 \documentclass[12pt]{beamer}
 
 % Theme 
-% \usetheme{Madrid}
+\usetheme{default}
+% \usetheme{Darmstadt}
+\usecolortheme{beaver}
+
+
+% Packages
 \usepackage{fancybox}   % fancy text box
 \usepackage{graphics}   % for graphics 
 
+
+% Settings
+% center
+% \setbeamertemplate{frametitle}[default][center]
+
+% add page number to nav bar
+\addtobeamertemplate{navigation symbols}{}{%
+  % uncomment to change color & font
+  % \setbeamercolor{footline}{fg=blue}
+  % \setbeamerfont{footline}{series=\bfseries}
+  \usebeamerfont{footline}%
+  \usebeamercolor[fg]{footline}%
+  \hspace{1em}%
+  \insertframenumber/\inserttotalframenumber
+}
+
+% frame title color
+\setbeamercolor{title}{fg=black}
+\setbeamercolor{frametitle}{fg=black}
 
 
 %----------------------
@@ -162,12 +186,24 @@
 %  - video 
 %------------------------
 
+\begin{frame}
+  \frametitle{Youtube}
+  \begin{figure}
+    \href{https://www.youtube.com/watch?v=_OBlgSz8sSM}
+    {\includegraphics[width=0.8\textwidth]{figs/logo-LCSR-800px.jpg}}
+    \caption{Suturing Video, Click to View}
+  \end{figure}
+
+  
+\end{frame}
+
 
 %------------------------
 % Code 
 %  - code snippet c++
 %  - python
 %------------------------
+
 
 
 
