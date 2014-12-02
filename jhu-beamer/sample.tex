@@ -1,5 +1,16 @@
 \documentclass[12pt]{beamer}
 
+% Theme 
+% \usetheme{Madrid}
+\usepackage{fancybox}   % fancy text box
+\usepackage{graphics}   % for graphics 
+
+
+
+%----------------------
+% Meta Info 
+%  - title/author/e.t.c
+%----------------------
 \title[Journal Club]{My Journal Club}
 \subtitle[short subtitle]{A long subtitle}
 \date[2014]{CISST Lab Meeting 2014/12/09}
@@ -20,33 +31,88 @@
   \titlepage
 \end{frame}
 
-%------------
-% TOC
-%------------
+%------------------
+% Table of Content
+%------------------
+
+% TOC 
 \begin{frame}
   \frametitle{Outline}
-  \tableofcontents[part=1]
+  \tableofcontents
+\end{frame}  
+
+% TOC before each section
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}  
+}
+
+\section{Basics}
+
+%------------
+% Alignment
+%------------
+\begin{frame}
+  \frametitle{Alignment}
+  \begin{center}
+    \textbf{Some text in bold}
+    \emph{Some text in emph}
+  \end{center}
+  
+  \textbf{Some text in bold} \\
+  \vskip10pt
+  \emph{Some text in emph}
+  
 \end{frame}
 
 
-\section{Introduction}
+%------------
+% Figures 
+%------------
+\section{Long Introduction}
 \begin{frame}
   \frametitle{frame1}
-  \textit{Words} some strings
+  \includegraphics[width=\textwidth]{figs/logo-LCSR-800px.jpg}
 \end{frame}
 
 \section{Algorithm}
 
+%------------------------
+% Frame structures 
+%  - columns 
+%  - block (theorem/example e.t.c.)
+%------------------------
+
 \begin{frame}
   \frametitle{Algorithm}
-  \textit{Words} Algorithms
-  \textbf{Part 1} This is part 1
+  \begin{columns}
+    \column{0.50\textwidth}
+    \begin{block}{Column 1 Header}
+      Column 1 body text
+      \ovalbox{Sample text oval}
+    \end{block}
+    \pause
+
+    \column{0.50\textwidth}
+    \begin{block}{Column 2 Header}
+      Column 2 body text Column 2 body text, asdff
+      Column 2 body text, Column 2 body text, 
+    \end{block}
+  \end{columns}
 
 \end{frame}
 
 
-\section{Lists}
-
+%------------------------
+% Lists
+%  - itemize
+%  - enumerate
+%  - description
+%------------------------
+\subsection{Lists}
 \begin{frame}
   \frametitle{Itemize}
   \begin{itemize}
@@ -73,6 +139,49 @@
   \item[Second Item] Description of second item
   \item[Third Item] Description of third item
   \end{description}
+\end{frame}
+
+% ----- Table --------
+\subsection{Tables}
+
+\begin{frame}
+  \frametitle{Table}
+  \begin{tabular}{|l|c|r|}
+    \textbf{No} & \textbf{Names} & \textbf{Comments}  \\
+    \hline
+    1 & Tom & Good  \\
+    2 & Sam & OK    \\ 
+    3 & Zack & Bad \\
+  \end{tabular}
+\end{frame}
+
+
+%------------------------
+% Mutimedia 
+%  - photo
+%  - video 
+%------------------------
+
+
+%------------------------
+% Code 
+%  - code snippet c++
+%  - python
+%------------------------
+
+
+
+
+%---------------------------
+% Appendix 
+%   - does not appear in toc
+%   - inc page counter
+%---------------------------
+\appendix
+
+\begin{frame}
+  \frametitle{Appendix}
+  \textbf{Some appendix here}
 \end{frame}
 
 
