@@ -15,6 +15,7 @@
 % Packages
 \usepackage{fancybox}   % fancy text box
 \usepackage{graphics}   % for graphics 
+\usepackage{pgf}   % for logo
 
 
 % Settings
@@ -51,6 +52,12 @@
   \includegraphics[height=23pt]{figs/logo-LCSR-800px.jpg}~~%
   \includegraphics[height=26.5pt]{figs/logo-cisst.png}%
 }
+
+% Uncomment to move logo to lower left
+%\logo{\pgfputat{\pgfxy(-9.5,0)}{\pgfbox[center,base]
+%    {\includegraphics[height=16pt]{figs/logo-jhu-bw.png}~~~~~%
+%      \includegraphics[height=18pt]{figs/logo-LCSR-bw.png}~~%
+%    }}}
 
 \begin{document}
 
